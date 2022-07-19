@@ -6,6 +6,8 @@ root.geometry('424x275')
 root.resizable(0,0)
 root.title('Calculator')
 root.configure(background='black')
+# $icon
+root.wm_iconbitmap('cal.ico')
 
 def display(arg):
     var.set(var.get()+ arg)
@@ -16,7 +18,7 @@ def eql():
         var.set(eval(exp))
     except:
         var.set('Error')
-        
+
 def clr():
     var.set('')
 
