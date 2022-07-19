@@ -11,8 +11,14 @@ def display(arg):
     var.set(var.get()+ arg)
 
 def eql():
-    pass
- 
+    try:
+        exp = var.get()
+        var.set(eval(exp))
+    except:
+        var.set('Error')
+        
+def clr():
+    var.set('')
 
 var = StringVar()
 e1 = Entry(font = 'Arial 25  bold',justify='right', textvariable=var)
